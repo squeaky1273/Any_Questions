@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Los_Angeles'
 
 USE_I18N = True
 
@@ -133,11 +133,3 @@ DEFAULT_LOGOUT_URL = '/'
 # Where to redirect during authentication
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
-
-# PROTIP:
-# Need to override settings? Create a local_settings.py file
-# in this directory, and add settings there.
-try:
-    from playlister.local_settings import *
-except ImportError:
-    pass

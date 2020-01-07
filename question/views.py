@@ -40,7 +40,7 @@ class QuestionDetailView(DetailView):
           post = form.save(commit=False)
           post.question_id = Question.objects.get(slug__iexact=slug)
           post.save()
-          return redirect('question-details-page', slug=slug)
+          return redirect('question-details-view', slug=slug)
 
 class SignUpView(CreateView):
   form_class = UserCreationForm
