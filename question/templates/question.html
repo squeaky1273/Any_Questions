@@ -12,9 +12,12 @@
     <div class="col m-4">
       <h3>{{ question.question_text }} <small class="text-muted">Last updated {{ playlist.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ question.author.username }}</b></small></h3>
       <hr>
-      <p>Created by: {{ question.author|linebreaksbr }}</p>
+      <p>Posted by: {{ question.author|linebreaksbr }}</p>
+      <p>Comments:</p>
       {% for comment in question.comment_set.all %}
-        {{ comment.comment }}
+        <div class='col-sm'>
+            {{ comment.comment }}
+        </div>
       {% endfor %}
       <hr>
       <form action='' method='POST'> 
@@ -23,6 +26,7 @@
         <input type="submit">
       </form>
       <a href="{% url 'question-list-view' %}">Back to List</a>
+      </div>
     </div>
   </div>
 {% endblock %}
