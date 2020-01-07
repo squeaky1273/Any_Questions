@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+    <head>
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
+        {% endblock head %}
+    </head>
+    
+{% block content %}
+<form action='' method='POST'> 
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit">
+</form>
+{% endblock %}
