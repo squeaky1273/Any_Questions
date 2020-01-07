@@ -126,10 +126,18 @@ STATICFILES_DIRS = [
 ]
 
 # playlist app settings
-QUESTION_NAME_MAX_LENGTH = 600
+QUESTION_NAME_MAX_LENGTH = 1000
 
 
 DEFAULT_LOGOUT_URL = '/'
 # Where to redirect during authentication
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+# PROTIP:
+# Need to override settings? Create a local_settings.py file
+# in this directory, and add settings there.
+try:
+    from playlister.local_settings import *
+except ImportError:
+    pass

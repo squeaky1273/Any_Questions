@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+
 {% load static %}
 <html>
     <head>
@@ -8,7 +8,7 @@
     </head>
 <body>
 {% block content %}
-  <h3>any Questions? {% if questions %}<small class="text-muted">({{ questions|length }} Questions)</small>{% endif %}</h3>
+  <h3>Any Questions? {% if questions %}<small class="text-muted">({{ questions|length }} Questions)</small>{% endif %}</h3>
   <hr>
   {% if questions %}
     <div class="card-columns">
