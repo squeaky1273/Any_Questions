@@ -37,10 +37,10 @@ class QuestionDetailView(DetailView):
     def post(self, request, slug):
         form = CommentForm(request.POST)
         if form.is_valid():
-          post = form.save(commit=False)
-          post.question_id = Question.objects.get(slug__iexact=slug)
-          post.save()
-          return redirect('question-details-view', slug=slug)
+          one_comment = form.save(commit=False)
+          one_comment.question_id = Question.objects.get(slug__iexact=slug)
+          one_comment.save()
+          return redirect('question-details-page', slug=slug)
 
 class SignUpView(CreateView):
   form_class = UserCreationForm
