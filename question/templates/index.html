@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+    <head>
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
+        {% endblock head %}
+    </head>
+<body>
+{% block content %}
+  <h3>any Questions? {% if questions %}<small class="text-muted">({{ questions|length }} Questions)</small>{% endif %}</h3>
+  <hr>
+  {% if questions %}
+    <div class="card-columns">
+      {% for question in questions %}
+        {% include "partials/card.html" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="alert alert-primary" role="alert">No questions to display.</div>
+  {% endif %}
+{% endblock %}
+</body>
