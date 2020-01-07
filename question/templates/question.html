@@ -1,5 +1,4 @@
-
-
+{% extends 'base.html' %}
 {% load static %}
 <html>
     <head>
@@ -7,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
         {% endblock head %}
     </head>
-    
+<body>
 {% block content %}
   <div class="row">
     <div class="col m-4">
@@ -27,3 +26,4 @@
     </div>
   </div>
 {% endblock %}
+</body>

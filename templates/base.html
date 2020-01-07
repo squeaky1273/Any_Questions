@@ -12,7 +12,7 @@
   {% endblock head %}
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'question-list-page' %}"><i class="fas fa-fw fa-book"></i> Any Questions?</a>
+      <a class="navbar-brand" href="{% url 'question-list-view' %}"><i class="fas fa-fw fa-book"></i> Any Questions?</a>
       <form class="form-inline ml-auto">
         {% if user.is_authenticated %}
         <div class="text-white">Hello, <strong>{{user.username}}</strong>!</div>

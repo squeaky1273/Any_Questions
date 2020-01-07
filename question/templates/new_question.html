@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
         {% endblock head %}
     </head>
-    
+<body>
 {% block content %}
 <form action='' method='POST'> 
     {% csrf_token %}
@@ -14,3 +14,4 @@
     <input type="submit">
 </form>
 {% endblock %}
+</body>
