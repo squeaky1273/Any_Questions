@@ -17,9 +17,9 @@ class QuestionTestCase(TestCase):
         user.save()
 
         # Create and save a new page to the test database.
-        question = Question(title="My Test Question", description="test", author=user)
+        question = Question(question_text="Will This Work?", author=user)
         question.save()
 
         # Make sure the slug that was generated in Question.save()
         # matches what we think it should be.
-        self.assertEqual(playlist.slug, "my-test-question")
+        self.assertEqual(question.slug, "will-this-work")
