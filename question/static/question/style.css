@@ -5,7 +5,7 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: linear-gradient(to bottom right, rgb(113, 199, 138),rgb(38, 175, 77),rgb(24, 185, 86),rgb(38, 175, 77), rgb(113, 199, 138)); /* Standard syntax (must be last) */
+    background-image: linear-gradient(to bottom right, rgb(110, 112, 111),rgb(148, 151, 149),rgb(222, 223, 222),rgb(148, 151, 149), rgb(110, 112, 111)); /* Standard syntax (must be last) */
 }
 footer {
     position: fixed;
