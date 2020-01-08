@@ -10,16 +10,16 @@ class QuestionTestCase(TestCase):
         self.assertEqual(True, True)
 
     def test_question_slugify_on_save(self):
-        """ Tests the slug generated when saving a Question. """
+        """ Tests that the slug is generated when saving a Question. """
         # Author is a required field in our model.
-        # Create a user for this test and save it to the test database.
+        # Create a user and save it to the test database.
         user = User()
         user.save()
 
-        # Create and save a new page to the test database.
+        # Create and save a new question to the test database.
         question = Question(question_text="Will This Work?", author=user)
         question.save()
 
-        # Make sure the slug that was generated in Question.save()
-        # matches what we think it should be.
+        # Make sure the generated slug in Question.save() above
+        # matches what we think it should show up.
         self.assertEqual(question.slug, "will-this-work")

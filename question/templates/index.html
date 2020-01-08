@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+<!--CSS code-->
 {% load static %}
 <html>
     <head>
@@ -6,6 +7,8 @@
         <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
         {% endblock head %}
     </head>
+<!--What shows up on the homepage. The questions that were posted will show up in separate cards. 
+  If there are no questions, a message will be displayed saying there are no questions.-->
 <body>
 {% block content %}
   <h3>Any Questions? {% if questions %}<small class="text-muted">({{ questions|length }} Question(s))</small>{% endif %}</h3>
