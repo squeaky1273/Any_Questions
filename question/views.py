@@ -41,6 +41,22 @@ class QuestionDetailView(DetailView):
           one_comment.question_id = Question.objects.get(slug__iexact=slug)
           one_comment.save()
           return redirect('question-details-page', slug=slug)
+    """
+    def update(request, slug):
+        question = Question.objects.get(slug__iexact=slug)
+        form = QuestionForm(request.POST or None, instance=question)
+
+        if form.is_valid():
+          form.save()
+          return redirect('question-details-page', slug=slug)
+
+    def delete(request, slug):
+        question = Question.objects.get(slug__iexact=slug)
+
+        if request.method = 'POST':
+          question.delete()
+          return redirect('index.html')
+    """
 
 class SignUpView(CreateView):
   form_class = UserCreationForm

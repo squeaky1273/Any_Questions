@@ -1,3 +1,10 @@
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* background-image: linear-gradient(to bottom right, rgb(113, 199, 138),rgb(18, 147, 67),rgb(1, 58, 17)); /* Standard syntax (must be last) */
+}
 footer {
     position: fixed;
     left: 0;
