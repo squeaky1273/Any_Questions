@@ -1,0 +1,10 @@
+<html>
+  <body>
+    <div class="container">
+      <form method="post">{% csrf_token %}
+        Are you sure you want to delete "{{ question }}" ?
+        <input class="btn btn-primary" type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

@@ -11,8 +11,14 @@
   If there are no questions, a message will be displayed saying there are no questions.-->
 <body>
 {% block content %}
-  <h3>Any Questions? {% if questions %}<small class="text-muted">({{ questions|length }} Question(s))</small>{% endif %}</h3>
+  <h2><b>Any Questions?</b>{% if questions %}<small class="text-muted">({{ questions|length }} Question(s))</small>{% endif %}</h2>
   <hr>
+  <center><h5>Welcome to <b>Any Questions?</b></h5>
+    <br>
+    <h6>We are a community dedicated to helping others with their career questions.
+    Here you are able to ask any questions career related 
+    and have fellow users answer them.</h6></center>
+    <br>
   {% if questions %}
     <div class="card-columns">
       {% for question in questions %}

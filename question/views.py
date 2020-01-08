@@ -5,6 +5,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.shortcuts import render, HttpResponseRedirect
 from django.views.generic import CreateView
+#from django.views.generic.edit import UpdateView, DeleteView
 
 from question.models import Question, Comment
 from question.forms import QuestionForm, CommentForm
@@ -41,22 +42,6 @@ class QuestionDetailView(DetailView):
           one_comment.question_id = Question.objects.get(slug__iexact=slug)
           one_comment.save()
           return redirect('question-details-page', slug=slug)
-    """
-    def update(request, slug):
-        question = Question.objects.get(slug__iexact=slug)
-        form = QuestionForm(request.POST or None, instance=question)
-
-        if form.is_valid():
-          form.save()
-          return redirect('question-details-page', slug=slug)
-
-    def delete(request, slug):
-        question = Question.objects.get(slug__iexact=slug)
-
-        if request.method = 'POST':
-          question.delete()
-          return redirect('index.html')
-    """
 
 class SignUpView(CreateView):
   form_class = UserCreationForm
@@ -79,3 +64,21 @@ class QuestionCreateView(CreateView):
         log = form.save()
         return HttpResponseRedirect(reverse_lazy('question-details-page', args=[log.slug]))
       return render(request, 'new_question.html', {'form': form})
+"""
+class QuestionUpdateView(UpdateView):
+      def update(request, slug):
+        question = Question.objects.get(slug__iexact=slug)
+        form = QuestionForm(request.POST or None, instance=question)
+
+        if form.is_valid():
+          form.save()
+          return redirect('question-details-page', slug=slug)
+
+class QuestionDeleteView(DeleteView):
+      def delete(request, slug):
+        question = Question.objects.get(slug__iexact=slug)
+
+        if request.method == 'POST':
+          question.delete()
+          return redirect('index.html')
+"""
