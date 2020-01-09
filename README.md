@@ -31,12 +31,13 @@ These instructions will help you get the project up and running on your machine.
 ## Running the tests
 
 Run the tests for this project from the command line using:
+
     * python3 manage.py test
 
 <a name="built"></a>
 ## Built With
 
-* Django - web framework
+* Django 2.2.8 - web framework
 * Python3 - language used to write
 * Bootstrap 4 - website styling
 
