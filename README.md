@@ -4,6 +4,10 @@
 https://p-r-anyquestions.herokuapp.com
 
 * [ Getting Started. ](#start)
+    * [ Prerequisites. ](#pre)
+        * [ Environment. ](#env)
+    * [ Installing. ](#install)
+        * [ Cloning Repo. ](#clone)
 * [ Running the tests. ](#test)
 * [ Built With. ](#built)
 * [ Author(s). ](#author(s))
@@ -14,20 +18,24 @@ https://p-r-anyquestions.herokuapp.com
 
 These instructions will help you get the project up and running on your machine.
 
+<a name="pre"></a>
 <h3>Prerequisites</h3>
 
 * Must have Git
 * Must have a GitHub account
 * Must have Python 3.7.4 installed
 
+<a name="env"></a>
 <h4>Environment</h4>
 
     * brew install python3
     * python3 -m pip install Django
     * python3 -m django --version
 
+<a name="install"></a>
 <h3>Installing</h3>
 
+<a name="clone"></a>
 <h4>Cloning Repo</h4>
 
     * git clone https://github.com/squeaky1273/Any_Questions.git
