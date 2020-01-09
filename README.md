@@ -49,6 +49,9 @@ Run the tests for this project from the command line using:
 * Django 2.2.8 - web framework
 * Python 3.7.4 - language used to write code
 * Bootstrap 4 - website styling
+* CSS -  website styling
+* HTML - website styling
+* Heroku - website host
 
 <a name="author(s)"></a>
 ## Author(s)
