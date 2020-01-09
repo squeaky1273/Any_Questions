@@ -15,7 +15,9 @@ These instructions will help you get the project up and running on your machine.
 
 <h2>Prerequisites</h2>
 * Must have Git
+
 * Must have a GitHub account
+
 * Must have Python 3.7.4 installed
 
 <h2>Installing</h2>
