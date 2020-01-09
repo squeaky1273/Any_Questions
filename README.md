@@ -19,9 +19,9 @@ These instructions will help you get the project up and running on your machine.
 <a name="built"></a>
 ## Built With
 
-    * [Django - web framework]
-    * [Python3 - language used to write]
-    * [Bootstrap 4 - website styling]
+* Django - web framework
+* Python3 - language used to write
+* Bootstrap 4 - website styling
 
 <a name="author(s)"></a>
 ## Author(s)
