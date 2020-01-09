@@ -13,13 +13,13 @@
 
 These instructions will help you get the project up and running on your machine.
 
-<h2>Prerequisites</h2>
+<h4>Prerequisites</h4>
 
 * Must have Git
 * Must have a GitHub account
 * Must have Python 3.7.4 installed
 
-<h2>Installing</h2>
+<h4>Installing</h4>
 
     * git clone https://github.com/squeaky1273/Any_Questions.git
     * cd forum
@@ -38,7 +38,7 @@ Run the tests for this project from the command line using:
 ## Built With
 
 * Django 2.2.8 - web framework
-* Python3 - language used to write
+* Python 3.7.4 - language used to write code
 * Bootstrap 4 - website styling
 
 <a name="author(s)"></a>
