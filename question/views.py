@@ -40,6 +40,7 @@ class QuestionDetailView(DetailView):
         if form.is_valid():
           one_comment = form.save(commit=False)
           one_comment.question_id = Question.objects.get(slug__iexact=slug)
+          one_comment.commenter = request.user
           one_comment.save()
           return redirect('question-details-page', slug=slug)
 

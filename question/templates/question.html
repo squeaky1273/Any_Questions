@@ -16,7 +16,7 @@
       <p>Comments:</p>
       {% for comment in question.comment_set.all %}
         <div class='col-sm'>
-            {{ comment.comment }}
+            {{comment.commenter}}: {{ comment.comment }}
         </div>
       {% endfor %}
       <hr>

@@ -37,6 +37,8 @@ class Question(models.Model):
 
 class Comment(models.Model):
     comment = models.CharField(max_length=200)
+    commenter = models.ForeignKey(User, on_delete=models.PROTECT,
+                            help_text="The user that posted this question.")
     question_id = models.ForeignKey(Question, on_delete=models.CASCADE)
 
     def __str__(self):
