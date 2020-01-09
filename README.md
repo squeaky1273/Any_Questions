@@ -26,7 +26,7 @@ These instructions will help you get the project up and running on your machine.
 <a name="author(s)"></a>
 ## Author(s)
 
-Padyn Riddell - Initial work - Make School Student and BEW concentration
+Padyn Riddell - <i>Initial work<i> - Make School Student and BEW concentration
 
 <a name="credit"></a>
 ## Acknowledgment
