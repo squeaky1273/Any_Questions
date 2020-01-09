@@ -14,17 +14,18 @@
 These instructions will help you get the project up and running on your machine.
 
 <h2>Prerequisites</h2>
+
 * Must have Git
-
 * Must have a GitHub account
-
 * Must have Python 3.7.4 installed
 
 <h2>Installing</h2>
 
-    *
-    *
-    *
+    * git clone https://github.com/squeaky1273/Any_Questions.git
+    * cd forum
+    * rm -rf .git
+    * git init
+    * git remote add origin https://github.com/YOUR_GITHUB_USERNAME/any_questions
 
 <a name="test"></a>
 ## Running the tests
