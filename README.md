@@ -1,15 +1,15 @@
 # Any Questions?
 
-1. [ Description. ](#desc)
-2. [ GettingStarted. ](#start)
+* [ Description. ](#desc)
+* [ GettingStarted. ](#start)
 
 <a name="desc"></a>
-## 1. Description
+## Description
 
-sometext
+Any Questions is a career forum website written in Python.
 
 <a name="start"></a>
-## 2. Getting Started
+## Getting Started
 
-sometext
+These instructions will help you get the project up and running on your machine.
  
