@@ -135,3 +135,6 @@ DEFAULT_LOGOUT_URL = '/'
 # Where to redirect during authentication
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+
+ALLOWED_HOSTS = ['localhost', 'p-r-anyquestions.herokuapp.com']
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
