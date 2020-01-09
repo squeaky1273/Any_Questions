@@ -1,5 +1,25 @@
-<h1>Update?</h1>
-<form method="post">{% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Submit" />
-</form>
+{% extends 'base.html' %}
+{% load static %}
+<html>
+    <head>
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
+        {% endblock head %}
+    </head>
+<body>
+{% block content %}
+<div class="card mb-3">
+    <h5 class="card-header">
+    <div class="card-body border-dark">
+        <div class="card-body border-dark">
+            <h1>Update?</h1>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="Submit" />
+                </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>

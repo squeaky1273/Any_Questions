@@ -1,10 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
 <html>
-  <body>
-    <div class="container">
-      <form method="post">{% csrf_token %}
-        Are you sure you want to delete "{{ question }}" ?
-        <input class="btn btn-primary" type="submit" value="Submit" />
-      </form>
-    </div>
-  </body>
-</html>
+    <head>
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
+        {% endblock head %}
+    </head>
+<body>
+{% block content %}
+<div class="card mb-3">
+    <h5 class="card-header">
+    <div class="card-body border-dark">
+        <div class="card-body border-dark">
+    <form method="post">{% csrf_token %}
+      <h3>Are you sure you want to delete "{{ question }}" ?</h3>
+      <input class="btn btn-primary" type="submit" value="Submit" />
+    </form>
+</div>
+{% endblock %}
+</body>
