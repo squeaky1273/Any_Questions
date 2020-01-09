@@ -20,13 +20,13 @@ These instructions will help you get the project up and running on your machine.
 * Must have a GitHub account
 * Must have Python 3.7.4 installed
 
-<h3>Installing</h3>
-
 <h4>Environment</h4>
 
     * brew install python3
     * python3 -m pip install Django
     * python3 -m django --version
+
+<h3>Installing</h3>
 
 <h4>Cloning Repo</h4>
 
