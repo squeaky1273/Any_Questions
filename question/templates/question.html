@@ -10,25 +10,41 @@
 {% block content %}
   <div class="row">
     <div class="col m-4">
-      <h3>{{ question.question_text }} <small class="text-muted">Last updated {{ question.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ question.author.username }}</b></small></h3>
-      <hr>
-      <p>Posted by: {{ question.author|linebreaksbr }}</p>
-      <p>Comments:</p>
-      {% for comment in question.comment_set.all %}
-        <div class='col-sm'>
-            {{comment.commenter}}: {{ comment.comment }}
+      <div class="card mb-3">
+        <h5 class="card-header">
+        <div class="card-body border-dark">
+          <small class="text-muted">Posted by <b>{{ question.author|linebreaksbr }}</b>
+            <br> 
+            Last updated {{ question.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ question.author.username }}</b></small>
+          <hr>
+          <div class="card mb-3">
+            <div class="card-body border-dark">
+              <div class="card-body border-dark">
+              <h3>{{ question.question_text }}</h3>
+            </div>
+            <hr>
+            <h3 class="card-header">
+              <div class="card mb-3">
+                 <div class="card-body border-dark">
+                    <form action='' method='POST'> 
+                      {% csrf_token %}
+                      <h5>Leave a {{ comment_form.as_p|linebreaksbr }}</h5>
+                      <h5><input type="submit"></h5
+                    </form>
+                    <hr>
+                        <h5>Comments:</h5>
+                          {% for comment in question.comment_set.all %}
+                            <div class='col-sm'>
+                              <h4><small class="text-muted">{{comment.commenter}}: {{ comment.comment }}</h4>
+                            </div>
+                          {% endfor %}
+                      </div>
+                  </div>
+                  <hr>
+                <br>
+            <a href="{% url 'question-list-view' %}"><h6>Back to List</h6></a>
         </div>
-      {% endfor %}
-      <hr>
-      <form action='' method='POST'> 
-        {% csrf_token %}
-        {{ comment_form.as_p|linebreaksbr }}
-        <input type="submit">
-      </form>
-      <br>
-      <a href="{% url 'question-list-view' %}"><p>Back to List</p></a>
       </div>
     </div>
-  </div>
 {% endblock %}
 </body>

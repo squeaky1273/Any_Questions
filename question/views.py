@@ -67,14 +67,19 @@ class QuestionCreateView(CreateView):
       return render(request, 'new_question.html', {'form': form})
 """
 class QuestionUpdateView(UpdateView):
-      def update(request, slug):
+      model = Question
+      form_class = QuestionForm
+      template_name = 'edit.html'
+
+      def update(self, request):
         question = Question.objects.get(slug__iexact=slug)
         form = QuestionForm(request.POST or None, instance=question)
 
         if form.is_valid():
           form.save()
           return redirect('question-details-page', slug=slug)
-
+"""
+"""
 class QuestionDeleteView(DeleteView):
       def delete(request, slug):
         question = Question.objects.get(slug__iexact=slug)

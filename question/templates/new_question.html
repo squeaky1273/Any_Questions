@@ -8,10 +8,17 @@
     </head>
 <body>
 {% block content %}
-<form action='' method='POST'> 
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit">
-</form>
+<div class="card mb-3">
+    <h5 class="card-header">
+    <div class="card-body border-dark">
+        <div class="card-body border-dark">
+            <form action='' method='POST'> 
+                {% csrf_token %}
+                {{form.as_p}}
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
 </body>
