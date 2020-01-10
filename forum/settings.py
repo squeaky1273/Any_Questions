@@ -19,7 +19,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "Secret"
+SECRET_KEY = 'SECRET'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -48,7 +48,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware'
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = 'forum.urls'
@@ -117,14 +117,17 @@ USE_L10N = True
 
 USE_TZ = True
 
+
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.9/howto/static-files/
+# https://docs.djangoproject.com/en/2.2/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static/"),
 ]
 
-# question app settings
+# playlist app settings
 QUESTION_NAME_MAX_LENGTH = 1000
 
 
@@ -133,18 +136,5 @@ DEFAULT_LOGOUT_URL = '/'
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
-# Required for Heroku
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
-# PROTIP:
-# Need to override settings? Create a local_settings.py file
-# in this directory, and add settings there.
-try:
-    from forum.local_settings import *
-except ImportError:
-    pass
-
-ALLOWED_HOSTS = ['localhost', 'p-r-anyquestions.herokuapp.com']
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# Heroku related hosts/code
+ALLOWED_HOSTS = ['localhost', 'p-r-anyquestions.herokuapp.com', '127.0.0.1']
