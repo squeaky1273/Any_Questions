@@ -29,8 +29,12 @@
                  <div class="card-body border-dark">
                     <form action='' method='POST'> 
                       {% csrf_token %}
+                      {% if user.is_authenticated %}
                       <h5>Leave a {{ comment_form.as_p|linebreaksbr }}</h5>
                       <h5><input type="submit"></h5>
+                      {% else %}
+                      <h5>You must Sign Up or Log In to post a comment</h5>
+                      {% endif %}
                     </form>
                     <hr>
                         <h5>Comments:</h5>
