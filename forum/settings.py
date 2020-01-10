@@ -136,5 +136,17 @@ DEFAULT_LOGOUT_URL = '/'
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
+# Required for Heroku
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+# PROTIP:
+# Need to override settings? Create a local_settings.py file
+# in this directory, and add settings there.
+try:
+    from forum.local_settings import *
+except ImportError:
+    pass
+
 # Heroku related hosts/code
 ALLOWED_HOSTS = ['localhost', 'p-r-anyquestions.herokuapp.com', '127.0.0.1']
