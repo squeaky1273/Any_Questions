@@ -10,8 +10,23 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Any Questions?</title>
   </head>
-  {% block head %}
-  {% endblock head %}
+  <style>
+  body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(to bottom right, rgb(110, 112, 111),rgb(148, 151, 149),rgb(222, 223, 222),rgb(148, 151, 149), rgb(110, 112, 111)); /* Standard syntax (must be last) */
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+  </style>
+
   <body>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark">
       <a class="navbar-brand" href="{% url 'question-list-view' %}"><i class="fas fa-fw fa-book"></i> Any Questions?</a>
