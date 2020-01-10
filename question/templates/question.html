@@ -50,8 +50,8 @@
             <div class="rows">
             <a href="{% url 'question-list-view' %}"><h6>Back to List</h6></a>
             {% if user.is_authenticated %}
-            <a href="{% url 'question-update-page' question.slug %}"class="btn btn-warning"><h6>Edit Question?</h6></a>
-            <a href="{% url 'question-delete' question.slug %}" class="btn btn-danger">Delete Question?</a>
+            <a href="{% url 'question-update-page' question.slug %}"class="btn btn-warning"><h6>Edit Question</h6></a>
+            <a href="{% url 'question-delete' question.slug %}" class="btn btn-danger">Delete Question</a>
             {% endif %}
         </div>
       </div>

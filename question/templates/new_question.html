@@ -11,14 +11,18 @@
 {% block content %}
 <div class="card mb-3">
     <h5 class="card-header"
-    <h1>Ask a Question</h1>
     <div class="card-body border-dark">
         <div class="card-body border-dark">
-            <form action='' method='POST'> 
-                {% csrf_token %}
-                <h5>{{form.as_p}}</h5>
-                <h5><input type="submit"></h5>
-            </form>
+        <h1>Ask a Question</h1>
+            <div class="card-body border-dark">
+                <div class="card-body border-dark">
+                    <form action='' method='POST'> 
+                    {% csrf_token %}
+                    <h5>{{form.as_p}}</h5>
+                    <h5><input type="submit"></h5>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>
