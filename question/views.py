@@ -4,7 +4,7 @@ from django.views.generic.detail import DetailView
 from django.contrib.auth.forms import UserCreationForm
 from django.urls import reverse_lazy
 from django.shortcuts import render, HttpResponseRedirect
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView, DeleteView
 #from django.views.generic.edit import UpdateView, DeleteView
 
 from question.models import Question, Comment
@@ -65,9 +65,10 @@ class QuestionCreateView(CreateView):
         log = form.save()
         return HttpResponseRedirect(reverse_lazy('question-details-page', args=[log.slug]))
       return render(request, 'new_question.html', {'form': form})
-"""
+
 class QuestionUpdateView(UpdateView):
       model = Question
+      """
       form_class = QuestionForm
       template_name = 'edit.html'
 
@@ -78,13 +79,18 @@ class QuestionUpdateView(UpdateView):
         if form.is_valid():
           form.save()
           return redirect('question-details-page', slug=slug)
-"""
-"""
+      """
+
 class QuestionDeleteView(DeleteView):
+      model = Question
+      """
+      form_class = QuestionForm
+      template_name = 'delete.html'
+
       def delete(request, slug):
         question = Question.objects.get(slug__iexact=slug)
 
         if request.method == 'POST':
           question.delete()
           return redirect('index.html')
-"""
+      """

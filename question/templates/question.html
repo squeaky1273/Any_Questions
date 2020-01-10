@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% load static from staticfiles %}
+{% load static %}
 <html>
     <head>
         {% block head %}
-        <link rel="stylesheet" type="text/css" href="/static/style.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
         {% endblock head %}
     </head>
 <body>
