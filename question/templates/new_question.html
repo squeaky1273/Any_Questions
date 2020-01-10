@@ -16,8 +16,8 @@
         <div class="card-body border-dark">
             <form action='' method='POST'> 
                 {% csrf_token %}
-                {{form.as_p}}
-                <input type="submit">
+                <h5>{{form.as_p}}</h5>
+                <h5><input type="submit"></h5>
             </form>
         </div>
     </div>
