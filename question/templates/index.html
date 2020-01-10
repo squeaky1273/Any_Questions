@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 <!--CSS code-->
-{% load static %}
+{% load static from staticfiles %}
 <html>
     <head>
         {% block head %}
-        <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
+        <link rel="stylesheet" type="text/css" href="/static/style.css">
         {% endblock head %}
     </head>
 <!--What shows up on the homepage. The questions that were posted will show up in separate cards. 
