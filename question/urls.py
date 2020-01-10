@@ -5,8 +5,8 @@ urlpatterns = [
     path('', QuestionListView.as_view(), name='question-list-view'),
     path('new_question/', QuestionCreateView.as_view(), name='question-new-page'),
     path('<str:slug>/', QuestionDetailView.as_view(), name='question-details-page'),
-    path('update/<str:slug>', QuestionUpdateView.as_view(), name='question-update-page'),
-    path('delete/<str:slug>', QuestionDeleteView.as_view(), name='question-delete-page')
+    path('<str:slug>/update', QuestionUpdateView.as_view(), name='question-update-page'),
+    path('<str:slug>/delete', QuestionDeleteView.as_view(), name='question-delete')
 ]
 
 """Url links to get the pages to be able to link together. 

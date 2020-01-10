@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.contrib.auth.forms import UserCreationForm
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from django.shortcuts import render, HttpResponseRedirect
 from django.views.generic import CreateView, UpdateView, DeleteView
 #from django.views.generic.edit import UpdateView, DeleteView
@@ -68,29 +68,19 @@ class QuestionCreateView(CreateView):
 
 class QuestionUpdateView(UpdateView):
       model = Question
-      """
+      template_name = 'update.html'
       form_class = QuestionForm
-      template_name = 'edit.html'
 
-      def update(self, request):
-        question = Question.objects.get(slug__iexact=slug)
-        form = QuestionForm(request.POST or None, instance=question)
-
-        if form.is_valid():
-          form.save()
-          return redirect('question-details-page', slug=slug)
-      """
+      def get_success_url(self):
+        return reverse('question-details-page', kwargs={
+            'slug': self.object.slug,
+          })
 
 class QuestionDeleteView(DeleteView):
       model = Question
-      """
-      form_class = QuestionForm
-      template_name = 'delete.html'
+      success_url = reverse_lazy('index')
 
-      def delete(request, slug):
-        question = Question.objects.get(slug__iexact=slug)
+      def get(self, *args, **kwargs):
+        print('get method update')
+        return self.delete(*args, **kwargs)
 
-        if request.method == 'POST':
-          question.delete()
-          return redirect('index.html')
-      """

@@ -43,7 +43,10 @@
                   </div>
                   <hr>
                 <br>
-            <a href="{% url 'question-list-view' %}"><h6>Back to List</h6></a>
+            <div class="rows">
+            <a href="{% url 'question-list-view' %}"class="btn btn-primary"><h6>Back to List</h6></a>
+            <a href="{% url 'question-update-page' question.slug %}"class="btn btn-warning"><h6>Edit Question?</h6></a>
+            <a href="{% url 'question-delete' question.slug %}" class="btn btn-danger">Delete Question?</a>
         </div>
       </div>
     </div>
