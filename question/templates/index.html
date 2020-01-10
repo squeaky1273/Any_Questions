@@ -13,11 +13,16 @@
 {% block content %}
   <h1><b>Any Questions?</b>{% if questions %}<small class="text-muted">({{ questions|length }} Question(s))</small>{% endif %}</h1>
   <hr>
-  <center><h3>Welcome to <b>Any Questions?</b></h3>
-    <br>
-    <h4>This is a community dedicated to helping others with their career questions.
-    Here you are able to ask any questions career related 
-    and have fellow users answer them.</h4></center>
+  <div class="card mb-3">
+    <h5 class="card-header">
+    <div class="card-body border-dark"
+      <center><h3>Welcome to <b>Any Questions?</b></h3>
+        <br>
+        <h4>This is a community dedicated to helping others with their career questions.
+          Here you are able to ask any questions career related 
+          and have fellow users answer them.</h4></center>
+      </div>
+    </div>
     <br>
   {% if questions %}
     <div class="card-columns">

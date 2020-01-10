@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q=^@)3@to-u4_7*)@uzm1&4axdr+h9cejie4p85jn1xgcg!y6&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -136,5 +136,6 @@ DEFAULT_LOGOUT_URL = '/'
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
 
+# Heroku related hosts/code
 ALLOWED_HOSTS = ['localhost', 'p-r-anyquestions.herokuapp.com', '127.0.0.1']
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
