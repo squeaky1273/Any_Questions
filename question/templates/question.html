@@ -2,7 +2,7 @@
 <!--CSS code (Need to work on later)-->
 <!--{% load static %}-->
 <html>
- <!--   <head>
+ <!--<head>
         {% block head %}
         <link rel="stylesheet" type="text/css" href="{% static 'question/style.css' %}">
         {% endblock head %}
@@ -30,7 +30,7 @@
                     <form action='' method='POST'> 
                       {% csrf_token %}
                       <h5>Leave a {{ comment_form.as_p|linebreaksbr }}</h5>
-                      </h5><input type="submit"></h5>
+                      <h5><input type="submit"></h5>
                     </form>
                     <hr>
                         <h5>Comments:</h5>
