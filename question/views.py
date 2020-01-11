@@ -78,7 +78,7 @@ class QuestionUpdateView(UpdateView):
 
 class QuestionDeleteView(DeleteView):
       model = Question
-      success_url = reverse_lazy('index')
+      success_url = '/'
 
       def get(self, *args, **kwargs):
         print('get method update')
